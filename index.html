@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda de instrumentos musicales de alta calidad">
+    <title>MusiShop - Instrumentos Musicales</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-music"></i> MusiShop
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/instrumentos.html">Instrumentos</a></li>
+                <li><a href="pages/galeria.html">Galería</a></li>
+                <li><a href="pages/sobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Bienvenido a MusiShop</h1>
+                <p>Descubre nuestra colección de instrumentos musicales de alta calidad</p>
+                <a href="pages/instrumentos.html" class="btn">Ver Productos</a>
+            </div>
+        </section>
+
+        <!-- Featured Products using Flexbox -->
+        <section class="container">
+            <h2 class="text-center mb-2">Productos Destacados</h2>
+            
+            <div class="flex-container">
+                <article class="flex-item">
+                    <img src="imagenes/violin.jpg" alt="Violín clásico">
+                    <h3>Instrumentos de Cuerda</h3>
+                    <p>Encuentra violines, guitarras y más instrumentos de cuerda de alta calidad para tu pasión musical.</p>
+                    <a href="pages/instrumentos.html" class="btn">Ver Más</a>
+                </article>
+                
+                <article class="flex-item">
+                    <img src="imagenes/guitar-beach-with-ocean-background_902639-19055.jpg" alt="Guitarra acústica">
+                    <h3>Instrumentos Acústicos</h3>
+                    <p>Guitarras acústicas y otros instrumentos diseñados para crear la música más hermosa.</p>
+                    <a href="pages/instrumentos.html" class="btn">Explorar</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Grid Section with Bootstrap integration -->
+        <section class="container">
+            <h2 class="text-center mb-2">¿Por qué elegirnos?</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-award fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">Calidad Premium</h5>
+                            <p class="card-text">Todos nuestros productos son seleccionados cuidadosamente para garantizar la mejor calidad.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shipping-fast fa-3x mb-3 text-success"></i>
+                            <h5 class="card-title">Envío Rápido</h5>
+                            <p class="card-text">Entregamos tu pedido en tiempo record, cuidando cada detalle del empaque.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-headset fa-3x mb-3 text-info"></i>
+                            <h5 class="card-title">Soporte 24/7</h5>
+                            <p class="card-text">Nuestro equipo está disponible para ayudarte en cualquier momento que lo necesites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +1 809 555-1234</li>
+                    <li><i class="fas fa-envelope"></i> info@musishop.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Santo Domingo, República Dominicana</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/instrumentos.html">Instrumentos</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="text-center mt-3">
+            <p>&copy; 2025 MusiShop. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
