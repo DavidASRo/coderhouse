@@ -37,47 +37,51 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Page Header -->
-        <section class="hero">
+        <!-- Contact Form Section -->
+        <section class="contact-form">
             <div class="container">
                 <h1>Contáctanos</h1>
-                <p>Estamos aquí para ayudarte con cualquier consulta sobre nuestros instrumentos musicales</p>
+                <p class="text-center mb-4">Estamos aquí para ayudarte con cualquier consulta sobre nuestros instrumentos musicales</p>
+                
+                <div class="form-container fade-in">
+                    <form>
+                        <div class="form-group">
+                            <label for="firstName">Nombre *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="producto">Información de producto</option>
+                                <option value="compra">Proceso de compra</option>
+                                <option value="soporte">Soporte técnico</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn pulse-hover">Enviar Mensaje</button>
+                    </form>
+                </div>
             </div>
         </section>
-
-        <div class="container">
-            <!-- Contact Information + Form using Bootstrap Grid -->
-            <div class="row g-5">
-                
-                <!-- Contact Form -->
-                <div class="col-lg-8">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3><i class="fas fa-envelope"></i> Envíanos un mensaje</h3>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="firstName" class="form-label">Nombre *</label>
-                                        <input type="text" class="form-control" id="firstName" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="lastName" class="form-label">Apellido *</label>
-                                        <input type="text" class="form-control" id="lastName" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label">Email *</label>
-                                        <input type="email" class="form-control" id="email" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="phone" class="form-label">Teléfono</label>
-                                        <input type="tel" class="form-control" id="phone">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="subject" class="form-label">Asunto *</label>
-                                        <select class="form-select" id="subject" required>
-                                            <option value="">Selecciona un asunto</option>
                                             <option value="consulta-producto">Consulta sobre instrumentos</option>
                                             <option value="soporte-tecnico">Soporte técnico</option>
                                             <option value="garantia">Garantía</option>

@@ -1,0 +1,74 @@
+// MAIN SCSS FILE - MusiShop
+// Este archivo importa todos los componentes SASS del proyecto
+
+// 1. Variables (siempre primero)
+@import 'variables';
+
+// 2. Mixins
+@import 'mixins';
+
+// 3. Extends/Placeholders
+@import 'extends';
+
+// 4. Animaciones
+@import 'animations';
+
+// 5. Base styles
+@import 'base';
+
+// 6. Componentes
+@import 'header';
+@import 'sections';
+@import 'footer';
+
+// 7. Páginas específicas
+@import 'pages';
+
+// 8. Utilidades adicionales
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+
+.mb-1 { margin-bottom: $spacing-xs !important; }
+.mb-2 { margin-bottom: $spacing-sm !important; }
+.mb-3 { margin-bottom: $spacing-md !important; }
+.mb-4 { margin-bottom: $spacing-lg !important; }
+
+.mt-1 { margin-top: $spacing-xs !important; }
+.mt-2 { margin-top: $spacing-sm !important; }
+.mt-3 { margin-top: $spacing-md !important; }
+.mt-4 { margin-top: $spacing-lg !important; }
+
+.p-1 { padding: $spacing-xs !important; }
+.p-2 { padding: $spacing-sm !important; }
+.p-3 { padding: $spacing-md !important; }
+.p-4 { padding: $spacing-lg !important; }
+
+// Clases para mostrar/ocultar en diferentes tamaños
+.show-mobile {
+    display: none !important;
+    
+    @include mobile {
+        display: block !important;
+    }
+}
+
+.hide-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.show-desktop {
+    display: none !important;
+    
+    @include desktop {
+        display: block !important;
+    }
+}
+
+.hide-desktop {
+    @include desktop {
+        display: none !important;
+    }
+}

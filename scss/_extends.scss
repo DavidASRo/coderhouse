@@ -1,0 +1,46 @@
+// Base styles para extender
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%container-base {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-sm;
+}
+
+%text-center {
+    text-align: center;
+}
+
+%full-width {
+    width: 100%;
+}
+
+%no-scroll {
+    overflow: hidden;
+}
+
+%hover-lift {
+    transition: transform $transition-fast;
+    
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
+
+%shadow-hover {
+    transition: box-shadow $transition-fast;
+    
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+}
+
+%reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

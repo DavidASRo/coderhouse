@@ -1,0 +1,112 @@
+header {
+    background: $white;
+    box-shadow: $box-shadow;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $header-height;
+    z-index: 1000;
+    
+    nav {
+        @extend %container-base;
+        @extend %flex-center;
+        justify-content: space-between;
+        height: 100%;
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: $primary-color;
+            @extend %flex-center;
+            
+            i {
+                margin-right: $spacing-xs;
+                animation: pulse 2s infinite;
+            }
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            
+            span {
+                width: 25px;
+                height: 3px;
+                background: $secondary-color;
+                margin: 3px 0;
+                transition: all $transition-fast;
+            }
+            
+            &.active {
+                span:nth-child(1) {
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+                
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+                
+                span:nth-child(3) {
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+            }
+            
+            @include mobile {
+                display: flex;
+            }
+        }
+        
+        .nav-links {
+            @extend %reset-list;
+            @extend %flex-center;
+            gap: $spacing-md;
+            
+            @include mobile {
+                position: fixed;
+                top: $header-height;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - #{$header-height});
+                background: $white;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: $spacing-lg;
+                transition: left $transition-fast;
+                
+                &.active {
+                    left: 0;
+                }
+            }
+            
+            li {
+                a {
+                    color: $secondary-color;
+                    font-weight: 500;
+                    padding: $spacing-xs $spacing-sm;
+                    border-radius: $border-radius;
+                    transition: all $transition-fast;
+                    
+                    &:hover {
+                        background: $primary-color;
+                        color: $white;
+                        transform: translateY(-2px);
+                    }
+                    
+                    @include mobile {
+                        font-size: 1.2rem;
+                        padding: $spacing-md;
+                        width: 200px;
+                        text-align: center;
+                        margin: $spacing-xs 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Ajuste del main para el header fijo
+main {
+    margin-top: $header-height;
+}

@@ -1,0 +1,33 @@
+// Variables de colores
+$primary-color: #ff6b35;
+$secondary-color: #2c3e50;
+$accent-color: #f39c12;
+$background-color: #ecf0f1;
+$text-color: #2c3e50;
+$white: #ffffff;
+$black: #000000;
+
+// Variables de fuentes
+$main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$heading-font: 'Georgia', serif;
+
+// Variables de espaciado
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 3rem;
+$spacing-xl: 4rem;
+
+// Variables de tamaños
+$header-height: 70px;
+$border-radius: 8px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 992px;
+$desktop: 1200px;
+
+// Transiciones
+$transition-fast: 0.3s ease;
+$transition-slow: 0.6s ease;

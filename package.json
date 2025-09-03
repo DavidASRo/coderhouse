@@ -1,0 +1,17 @@
+{
+  "name": "coderhouse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/main.scss css/style.css --source-map",
+    "sass:watch": "sass scss/main.scss css/style.css --source-map --watch",
+    "build": "sass scss/main.scss css/style.css --source-map --style compressed"
+  },
+  "keywords": ["HTML", "CSS", "SASS", "Responsive", "MusiShop"],
+  "author": "David",
+  "license": "ISC",
+  "description": "Proyecto de tienda de instrumentos musicales con SASS y diseño responsive",
+  "devDependencies": {
+    "sass": "^1.92.0"
+  }
+}

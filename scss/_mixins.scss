@@ -1,0 +1,70 @@
+// Mixin para centrar elementos
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixin para botones
+@mixin button-style($bg-color: $primary-color, $text-color: $white, $hover-bg: darken($primary-color, 10%)) {
+    padding: $spacing-xs $spacing-md;
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    border-radius: $border-radius;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all $transition-fast;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: $hover-bg;
+        transform: translateY(-2px);
+        box-shadow: $box-shadow;
+    }
+}
+
+// Mixin para cards
+@mixin card-style {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: $spacing-md;
+    transition: transform $transition-fast;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+// Mixin para responsive
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+// Mixin para animaciones
+@mixin fade-in($duration: 0.5s) {
+    animation: fadeIn $duration ease-in;
+}
+
+@mixin scale-hover($scale: 1.05) {
+    transition: transform $transition-fast;
+    
+    &:hover {
+        transform: scale($scale);
+    }
+}
